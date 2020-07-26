@@ -1,7 +1,7 @@
-// Начните писать стили здесь
 @import "variables.less";
 @import "mixin.less";
 @import "font.less";
+@import "scaffolding.less";
 @import "blocks/page.less";
 @import "blocks/main-nav.less";
 @import "blocks/info-city.less";
@@ -19,35 +19,4 @@
 @import "blocks/copyright.less";
 @import "blocks/promo-video.less";
 @import "blocks/gallery.less";
-@import "blocks/report-form.less";
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+@import "blocks/form.less";

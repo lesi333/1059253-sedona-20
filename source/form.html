@@ -49,75 +49,75 @@
           <h1 class="response__title">Оставьте свой отзыв</h1>
           <p class="response__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
-        <form class="report-form" action="https://echo.htmlacademy.ru" method="GET">
-          <div class="report-form__container">
-            <fieldset class="report-name fieldset">
-              <legend class="report-name__title legend">Представьтесь:</legend>
-                <div class="report-name__item">
-                  <label class="report-name__field" for="name">Имя<sup>*</sup>:</label>
-                  <input class="report-name__data input_data" id="name" type="text" name="name" value="Петр" placeholder="Петр" required>
+        <form class="response__form form" action="https://echo.htmlacademy.ru" method="GET">
+          <div class="form__container">
+            <fieldset class="form__fieldset">
+              <legend class="form__title">Представьтесь:</legend>
+                <div class="form__item">
+                  <label class="form__field form__field--font-norm" for="name">Имя<sup>*</sup>:</label>
+                  <input class="form__data" id="name" type="text" name="name" value="Петр" placeholder="Петр" required>
                 </div>
-                <div class="report-name__item">
-                  <label class="report-name__field" for="surname">Фамилия<sup>*</sup>:</label>
-                  <input class="report-name__data input_data" id="surname" type="text" name="surname" value="Иванов" placeholder="Иванов" required>
+                <div class="form__item">
+                  <label class="form__field form__field--font-norm" for="surname">Фамилия<sup>*</sup>:</label>
+                  <input class="form__data" id="surname" type="text" name="surname" value="Иванов" placeholder="Иванов" required>
                 </div>
-                <div class="report-name__item">
-                <label class="report-name__field" for="patronymic">Отчество<sup>*</sup>:</label>
-                <input class="report-name__data input_data" id="patronymic" type="text" name="patronymic" value="Александрович" placeholder="Александрович" required>
+                <div class="form__item">
+                <label class="form__field form__field--font-norm" for="patronymic">Отчество<sup>*</sup>:</label>
+                <input class="form__data" id="patronymic" type="text" name="patronymic" value="Александрович" placeholder="Александрович" required>
               </div>
             </fieldset>
-            <fieldset class="report-contacts fieldset">
-              <legend class="report-contacts__title legend">Контактная информация:</legend>
-                <div class="report-contacts__item">
-                  <label class="report-contacts__field" for="phone">Контактный телефон<sup>*</sup>:</label>
-                  <input class="report-contacts__data input_data" id="phone" type="tel" name="tel" value="Введите телефон" placeholder="Введите телефон" required>
+            <fieldset class="form__fieldset">
+              <legend class="form__title">Контактная информация:</legend>
+                <div class="form__item">
+                  <label class="form__field form__field--font-norm" for="phone">Контактный телефон<sup>*</sup>:</label>
+                  <input class="form__data" id="phone" type="tel" name="tel" value="Введите телефон" placeholder="Введите телефон" required>
                 </div>
-                <div class="report-contacts__item">
-                  <label class="report-contacts__field" for="email">Электронная почта<sup>*</sup>:</label>
-                  <input class="report-contacts__data input_data" id="email" type="email" name="email" value="Введите e-mail" placeholder="Введите e-mail" required>
-                </div>
-            </fieldset>
-            <fieldset class="report-impression fieldset">
-              <legend class="report-impression__title legend">Ваше общее впечатление:</legend>
-                <div class="report-impression__item">
-                  <input class="report-impression__data" id="radio-positive" type="radio" name="impress" value="positive" placeholder="Скорее положительное" checked>
-                  <label class="report-impression__field radio-label" for="radio-positive">Скорее положительное</label>
-                </div>
-                <div class="report-impression__item">
-                  <input class="report-impression__data" id="radio-negative" type="radio" name="impress" value="negative" placeholder="Скорее отрицательное">
-                  <label class="report-impression__field radio-label" for="radio-negative">Скорее отрицательное</label>
-                </div>
-                <div class="report-impression__item">
-                  <input class="report-impression__data" id="radio-abstain" type="radio" name="impress" value="abstain" placeholder="Затрудняюсь ответить">
-                  <label class="report-impression__fiel radio-label" for="radio-abstain">Затрудняюсь ответить</label>
+                <div class="form__item">
+                  <label class="form__field form__field--font-norm" for="email">Электронная почта<sup>*</sup>:</label>
+                  <input class="form__data" id="email" type="email" name="email" value="Введите e-mail" placeholder="Введите e-mail" required>
                 </div>
             </fieldset>
-            <fieldset class="report-sights fieldset">
-              <legend class="report-sights__title legend">Посещенные достопримечательности:</legend>
-                <div class="report-sights__item">
-                  <input class="report-sights__data" id="checkbox-bridge" type="checkbox" name="bridge" placeholder="Мост Дьявола" checked>
-                  <label class="report-sights__field checkbox-label" for="checkbox-bridge">Мост Дьявола</label>
+            <fieldset class="form__fieldset">
+              <legend class="form__title">Ваше общее впечатление:</legend>
+                <div class="form__item">
+                  <input class="form__data" id="radio-positive" type="radio" name="impress" value="positive" placeholder="Скорее положительное" checked>
+                  <label class="form__field" for="radio-positive">Скорее положительное</label>
                 </div>
-                <div class="report-form__item">
-                  <input class="report-sights__data" id="checkbox-mount" type="checkbox" name="mount" placeholder="Гора-Колокол" checked>
-                  <label class="report-sights__field checkbox-label" for="checkbox-mount">Гора-Колокол</label>
+                <div class="form__item">
+                  <input class="form__data" id="radio-negative" type="radio" name="impress" value="negative" placeholder="Скорее отрицательное">
+                  <label class="form__field" for="radio-negative">Скорее отрицательное</label>
                 </div>
-                <div class="report-sights__item">
-                  <input class="report-sights__data" id="checkbox-park" type="checkbox" name="park" placeholder="Слайд-парк" checked>
-                  <label class="report-sights__field checkbox-label" for="checkbox-park">Слайд-парк</label>
-                </div>
-                <div class="report-sights__item">
-                  <input class="report-sights__data" id="checkbox-rock" type="checkbox" name="rock" placeholder="Красные скалы">
-                  <label class="report-sights__field checkbox-label" for="checkbox-rock">Красные скалы</label>
+                <div class="form__item">
+                  <input class="form__data" id="radio-abstain" type="radio" name="impress" value="abstain" placeholder="Затрудняюсь ответить">
+                  <label class="form__field" for="radio-abstain">Затрудняюсь ответить</label>
                 </div>
             </fieldset>
-            <fieldset class="report fieldset">
-              <legend class="report__title legend">Опишите свои эмоции:</legend>
+            <fieldset class="form__fieldset">
+              <legend class="form__title">Посещенные достопримечательности:</legend>
+                <div class="form__item">
+                  <input class="form__data" id="checkbox-bridge" type="checkbox" name="bridge" placeholder="Мост Дьявола" checked>
+                  <label class="form__field" for="checkbox-bridge">Мост Дьявола</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__data" id="checkbox-mount" type="checkbox" name="mount" placeholder="Гора-Колокол" checked>
+                  <label class="form__field" for="checkbox-mount">Гора-Колокол</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__data" id="checkbox-park" type="checkbox" name="park" placeholder="Слайд-парк" checked>
+                  <label class="form__field" for="checkbox-park">Слайд-парк</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__data" id="checkbox-rock" type="checkbox" name="rock" placeholder="Красные скалы">
+                  <label class="form__field" for="checkbox-rock">Красные скалы</label>
+                </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__title">Опишите свои эмоции:</legend>
               <label for="comment"><p class="visually-hidden">Отзыв</p></label>
-              <textarea class="report__field field" name="comment" id="comment">Опишите подробно все свои восторги</textarea>
+              <textarea class="form__field" name="comment" id="comment">Опишите подробно все свои восторги</textarea>
             </fieldset>
           </div>
-          <button class="report-form__button button" type="submit">Отправить отзыв</button>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
         </form>
       </section>
     </main>

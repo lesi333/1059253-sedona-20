@@ -1,12 +1,12 @@
-.report-form {
+.form {
   margin-top: 20px;
 }
 
-.fieldset {
+.form__fieldset {
   border: none;
 }
 
-.legend {
+.form__title {
   .reset();
   font-size: 18px;
   line-height: 26px;
@@ -15,13 +15,15 @@
   color: @basic-black;
 }
 
-.input_data,
-.radio-label,
-.checkbox-label,
-.field {
+.form__data,
+.form__field {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: @basic-black;
   text-transform: none;
+}
+
+.form__field--font-norm {
+  font-weight: 400;
 }
