@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -18,7 +19,7 @@
             </a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="photo.html">
+            <a>
               Фото и видео
             </a>
           </li>
@@ -34,14 +35,14 @@
           </li>
         </ul>
       </div>
-        <a class="main-nav__logo">
-          <img src="https://via.placeholder.com/150x150" alt="Логотип города Седона">
+        <a class="main-nav__logo" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
         </a>
       </nav>
     </header>
     <main class="page-main">
       <div class="promo">
-        <img class="promo__picture" src="https://via.placeholder.com/150x150" alt="Промо Седона">
+        <img class="promo__picture" src="img/text-sedona.svg" width="229" height="39" alt="Промо Седона">
       </div>
       <section class="photo-gallery">
         <div class="photo-gallery__header">
@@ -53,7 +54,7 @@
             <figure class="gallery__item">
               <a class="gallery__link" href="#">
                 <picture>
-                  <img src="https://via.placeholder.com/150x150" alt="Неродные просторы">
+                  <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
                 </picture>
               </a>
               <figcaption class="gallery__signature">
@@ -69,7 +70,7 @@
             <figure class="gallery_item">
               <a class="gallery__link" href="#">
                 <picture>
-                  <img src="https://via.placeholder.com/150x150" alt="Местная растительность">
+                  <img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
                 </picture>
               </a>
               <figcaption class="gallery__signature">
@@ -85,7 +86,7 @@
             <figure class="gallery_item">
               <a class="gallery__link" href="#">
                 <picture>
-                  <img src="https://via.placeholder.com/150x150" alt="Дорога на север">
+                  <img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
                 </picture>
               </a>
               <figcaption class="gallery__signature">
@@ -101,7 +102,7 @@
             <figure class="gallery_item">
               <a class="gallery__link" href="#">
                 <picture>
-                  <img src="https://via.placeholder.com/150x150" alt="Мост дьявола">
+                  <img src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
                 </picture>
               </a>
               <figcaption class="gallery__signature">
@@ -120,9 +121,11 @@
         <p class="promo-video__title">Все еще сомневаетесь?</p>
         <p class="promo-video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="promo-video__demo">
-          <picture>
-            <img src="https://via.placeholder.com/150x150" alt="Видеопрезентация">
-          </picture>
+          <video poster="img/video-mobile@1x.jpg" width="320" height="201" preload="metadata">
+            <source src="https://via.placeholder.com/150x150" type="video/ogg">
+            <source src="https://via.placeholder.com/150x150" type="video/mp4">
+            <source src="https://via.placeholder.com/150x150" type="video/webm">
+          </video>
           <div class="promo-video__control">
             <div class="promo-video__scale">
               <div class="promo-video__bar"></div>
@@ -138,7 +141,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__tag">
-        <a href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
+        <a class="page-footer__visit" href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
       </div>
       <div class="page-footer__social social">
         <ul class="social__list">
