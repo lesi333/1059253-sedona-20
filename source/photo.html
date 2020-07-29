@@ -11,7 +11,6 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a href="index.html">
@@ -34,7 +33,6 @@
             </a>
           </li>
         </ul>
-      </div>
         <a class="main-nav__logo" href="index.html">
           <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
         </a>
@@ -49,9 +47,9 @@
           <h1 class="photo-gallery__title">Фото и видео</h1>
           <p class="photo-gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о политике и экономике.</p>
         </div>
-        <div class="gallery_container">
-          <div class="gallery gallery_container__gallery">
-            <figure class="gallery__item">
+        <div class="photo-gallery__container">
+          <div class="photo-gallery__gallery gallery">
+            <figure class="gallery__item gallery__item--first">
               <a class="gallery__link" href="#">
                 <picture>
                   <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
@@ -117,9 +115,11 @@
         </div>
       </section>
       <section class="promo-video">
-        <h2 class="visually-hidden">Видеопрезентация города Седоны</h2>
-        <p class="promo-video__title">Все еще сомневаетесь?</p>
-        <p class="promo-video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <div class="promo-video__item">
+          <h2 class="visually-hidden">Видеопрезентация города Седоны</h2>
+          <p class="promo-video__title">Все еще сомневаетесь?</p>
+          <p class="promo-video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
         <div class="promo-video__demo">
           <video poster="img/video-mobile@1x.jpg" width="320" height="201" preload="metadata">
             <source src="https://via.placeholder.com/150x150" type="video/ogg">

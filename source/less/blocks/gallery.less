@@ -1,7 +1,35 @@
 .gallery {
-  line-height: 24px;
+  border-top: 1px solid @photo-border-gray;
+}
+
+.gallery__item {
+  text-align: left;
   margin-top: 22px;
-  margin-bottom: 32px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    border-top: none;
+  }
+
+  .gallery__item {
+    width: 50%;
+  }
+
+  .gallery__item--first {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    border-top: none;
+  }
+
+  .gallery__item {
+    width: 400px;
+  }
 }
 
 .gallery__title {

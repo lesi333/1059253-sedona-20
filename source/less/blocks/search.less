@@ -1,5 +1,6 @@
 .search {
   text-align: center;
+  margin-top: 33px;
   margin-bottom: 49px;
 }
 
@@ -8,8 +9,30 @@
   font-size: 21px;
   font-weight: 700;
   color: @basic-black;
+  margin-bottom: 32px;
 }
 
 .search__description {
   .reset ();
+  margin-bottom: 27px;
+  line-height: 24px;
+}
+
+.search__button {
+  .button ();
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .search__button {
+    width: 458px;
+  }
+
+  .search__title {
+    font-size: 30px;
+  }
 }

@@ -4,13 +4,39 @@
   font-weight: 700;
   text-align: center;
   color: @basic-black;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 33px;
+}
+
+.response__header {
+  width: 306px;
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .response__title {
+    font-size: 30px;
+  }
+
+  .response__header {
+    width: 434px;
+    margin-top: 70px;
+    margin-bottom: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .response__header {
+    width: 434px;
+    margin-top: 114px;
+    margin-bottom: 57px;
+  }
 }
 
 .response__description {
   margin: 0;
   text-align: center;
+  line-height: 24px;
   color: @basic-extra-black;
-  padding-bottom: 24px;
 }

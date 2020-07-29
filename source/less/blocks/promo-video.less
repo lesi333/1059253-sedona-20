@@ -8,9 +8,23 @@
   font-size: 18px;
   font-weight: 700;
   color: @basic-black;
+  margin-bottom: 38px;
 }
 
 .promo-video__description {
   .reset ();
+  line-height: 24px;
   margin-bottom: 33px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-video__title {
+    font-size: 30px;
+  }
+
+  .promo-video__description {
+    .reset ();
+    line-height: 26px;
+    margin-bottom: 78px;
+  }
 }
