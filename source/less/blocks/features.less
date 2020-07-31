@@ -11,8 +11,92 @@
   color: @basic-black;
 }
 
+
+.features__color--bottom {
+  padding-top: 39px;
+  padding-right: 16px;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}
+
+
+.features__color--top {
+  padding-top: 34px;
+  padding-right: 12px;
+  padding-bottom: 39px;
+  padding-left: 13px;
+}
+
 .features__slogan {
-  .reset ();
+  margin: 0;
+  padding-top: 15px;
+}
+
+.features__color--grey {
+  background-color: @basic-natural;
+  padding-top: 26px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid @special-border-gray;
+}
+
+.features__title--grey {
+  padding-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .features__title {
+    font-size: 21px;
+  }
+
+  .features__color {
+    width: 256px;
+  }
+
+  .features__color--top {
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-bottom: 44px;
+    padding-left: 32px;
+  }
+
+  .features__color--bottom {
+    padding-top: 43px;
+    padding-right: 36px;
+    padding-bottom: 41px;
+    padding-left: 36px;
+  }
+
+  .features__color--grey {
+    border-bottom: none;
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__color {
+    width: 400px;
+  }
+
+  .features__color--top {
+    padding-top: 47px;
+    padding-right: 53px;
+    padding-bottom: 57px;
+    padding-left: 52px;
+  }
+
+  .features__color--bottom {
+    padding-top: 51px;
+    padding-right: 78px;
+    padding-bottom: 53px;
+    padding-left: 79px;
+  }
 }
 
 .features__title--font-white {
@@ -22,8 +106,4 @@
 .features__color--blue {
   background-color: @basic-light-blue;
   color: @basic-white;
-}
-
-.features__color--grey {
-  background-color: @basic-natural;
 }

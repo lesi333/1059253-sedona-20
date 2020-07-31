@@ -1,11 +1,31 @@
 .promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-width: 320px;
   background-color: @special-coll-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  padding-top: 52px;
+  padding-bottom: 67px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    padding-top: 95px;
+    padding-bottom: 118px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-top: 102px;
+    padding-bottom: 120px;
+  }
 }
 
 .promo__picture {
   .reset ();
-  min-height: 158px;
 }

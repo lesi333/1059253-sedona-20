@@ -4,8 +4,19 @@
   padding-bottom: 26px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: grid;
+    min-width: 320px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .page-footer__visit {
   font-size: 21px;
   font-weight: 700;
   color: @basic-black;
+  margin-top: 29px;
+  margin-bottom: 34px;
 }
