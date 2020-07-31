@@ -1,5 +1,14 @@
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
   margin-top: 20px;
+}
+
+.form__list {
+  .reset ();
+  list-style: none;
 }
 
 .form__fieldset {
@@ -14,6 +23,133 @@
   color: @basic-black;
 }
 
+.field-name {
+  margin-bottom: 20px;
+}
+
+.field-contacts {
+  margin-bottom: 20px;
+}
+
+.field-impressions {
+  margin-bottom: 15px;
+}
+
+.field-sights {
+  margin-bottom: 20px;
+}
+
+.field-review {
+  margin-bottom: 51px;
+}
+
+.form__required {
+  .reset ();
+}
+
+.button__container {
+  margin-bottom: 48px;
+}
+
+.form__button {
+  .button ();
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 19px;
+  padding-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .form__title {
+    font-size: 21px;
+  }
+
+  .field-name {
+    width: 324px;
+    margin-bottom: 72px;
+  }
+
+  .field-contacts {
+    width: 100%;
+    margin-bottom: 52px;
+  }
+
+  .field-impressions {
+    width: 323px;
+    order: -1;
+  }
+
+  .field-sights {
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  .field-review {
+    width: 100%;
+    margin-bottom: 58px;
+  }
+
+  .form__required {
+    margin-left: 184px;
+  }
+
+  .button__container {
+    display: flex;
+    margin-bottom: 61px;
+  }
+
+  .form__button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .field-name {
+    width: 479px;
+    margin-bottom: 70px;
+  }
+
+  .field-impressions {
+    width: 473px;
+    order: -1;
+  }
+
+  .contact {
+    display: inline-block;
+    width: 400px;
+  }
+
+  .contact span {
+    display: none;
+  }
+
+  .form__required {
+    margin-left: 320px;
+  }
+
+  .form__button {
+    width: 480px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__required {
+    display: none;
+  }
+}
+
 .form__data,
 .form__field {
   font-size: 18px;
@@ -26,15 +162,4 @@
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-.form__button {
-  .button ();
-  display: block;
-  width: 280px;
-  margin: 0 auto;
-  padding-top: 19px;
-  padding-bottom: 14px;
-  margin-bottom: 48px;
-  margin-top: 51px;
 }
