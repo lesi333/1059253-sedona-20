@@ -40,3 +40,22 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: @mobile-width-container;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    max-width: @tablet-width-container;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: @desktop-width-container;
+  }
+}
