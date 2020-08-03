@@ -4,6 +4,11 @@
   margin-bottom: 49px;
 }
 
+.search__item {
+  width: 261px;
+  margin: 0 auto;
+}
+
 .search__title {
   .reset ();
   font-size: 21px;
@@ -25,14 +30,58 @@
   margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 18px;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-dark-blue;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @photo-border-gray;
+  }
+}
+
+.search__line {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
+  .search {
+    text-align: center;
+    margin-top: 57px;
+    margin-bottom: 58px;
+  }
+
   .search__button {
     width: 458px;
   }
 
   .search__title {
     font-size: 30px;
+  }
+
+  .search__item {
+    width: 435px;
+  }
+
+  .search__line {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search {
+    text-align: center;
+    margin-top: 58px;
+    margin-bottom: 66px;
+  }
+
+  .search__line {
+    display: block;
   }
 }

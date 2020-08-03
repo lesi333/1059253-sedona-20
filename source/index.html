@@ -9,7 +9,7 @@
   <body class="page__body">
     <div class="container">
       <header class="page-header">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -46,7 +46,7 @@
           <p class="welcome__picture"><img src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в Седону"></p>
         </div>
         <section class="info-city">
-          <div class="info-city__header">
+          <div class="info-city__header info-city--intro">
             <h1 class="info-city__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
             <p class="info-city__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </div>
@@ -60,14 +60,14 @@
               <img src="img/main-city-mobile@1x.jpg" width="520" height="260" alt="Вид на город Седона">
             </div>
           </div>
-          <div class="advantages">
+          <div class="features__advantage advantages">
             <div class="advantages__item advantages__item--house">
               <h2 class="advantages__title">Жилье</h2>
               <p class="advantages__description advantages__description--house">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="advantages__item advantages__item--souvenir">
               <h2 class="advantages__title">Сувениры</h2>
-              <p class="advantages__description advantages__description--souvenir">Не только китайского,<br> но и местного производства!</p>
+              <p class="advantages__description advantages__description--souvenir">Не только китайского, <br class="advantages__line"> но и местного производства!</p>
             </div>
             <div class="advantages__item advantages__item--food">
               <h2 class="advantages__title">Еда</h2>
@@ -85,17 +85,17 @@
             </div>
           </div>
           <div class="features">
-            <div class="features__color features__color--grey">
+            <div class="features__color features__color--item1 features__color--grey">
               <h2 class="features__title features__title--grey">Небольшая площадь</h2>
               <span class="features__number">- №3 -</span>
               <p class="features__slogan">Все интересные места находятся очень близко</p>
             </div>
-            <div class="features__color features__color--grey">
+            <div class="features__color features__color--item2 features__color--grey">
               <h2 class="features__title features__title--grey">Красивая дорога</h2>
               <span class="features__number">- №4 -</span>
               <p class="features__slogan">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
-            <div class="features__color features__color--grey">
+            <div class="features__color features__color--item3 features__color--grey">
               <h2 class="features__title features__title--grey">Мало туристов</h2>
               <span class="features__number">- №5 -</span>
               <p class="features__slogan">Большинство едет в Гранд Каньон и толпится там
@@ -104,36 +104,43 @@
           </div>
         </section>
         <section class="search">
-          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-          <p class="search__title">Заинтересовались?</p>
-          <p class="search__description">Укажите предполагаемые даты поездки, и мы покажем Вам лучшиепредложения гостиниц в Седоне</p>
+          <div class="search__item">
+            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+            <p class="search__title">Заинтересовались?</p>
+            <p class="search__description">Укажите предполагаемые даты поездки, <br class="search__line">и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+          </div>
           <a href="#" class="search__button button">Найти гостиницу</a>
         </section>
         <div class="map">
           <img src="img/bg-map-mobile@1x.jpg" width="320" height="350"alt="Карта города Седоны">
         </div>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer__footer--index">
         <div class="page-footer__tag">
           <a class="page-footer__visit" href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="ttps://twitter.com/htmlacademy">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="ttps://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">Мы в Ютубе</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы в Ютубе</span></a>
             </li>
         </div>
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано:</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML и CSS, уровень 2">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML и CSS, уровень 2">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" fill="#231f20"/>
+            </svg>
+          </a>
         </div>
       </footer>
     </div>
+    <script src="js/open-close.js"></script>
   </body>
 </html>
