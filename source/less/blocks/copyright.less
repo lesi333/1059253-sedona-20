@@ -1,3 +1,45 @@
+.copyright {
+  display: flex;
+}
+
 .copyright__text {
   color: @basic-black;
+  text-align: center;
+  padding-right: 13px;
+  padding-left: 94px;
+}
+
+a.copyright__link:hover path,
+a.copyright__link:focus path {
+  fill: @basic-light-blue;
+}
+
+a.copyright__link:active path {
+  fill: @special-logo-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 48px;
+  }
+
+  .copyright__link {
+    padding-right: 60px;
+  }
+
+  .copyright__text {
+    padding-right: 13px;
+    padding-left: 0;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__link {
+    padding-right: 54px;
+  }
+
+  .copyright__text {
+    padding-left: 82px;
+  }
 }

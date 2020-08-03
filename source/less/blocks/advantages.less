@@ -3,8 +3,8 @@
   line-height: 21px;
   text-align: center;
   background-color: @basic-white;
-  padding-top: 35px;
   padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .advantages__item {
@@ -13,6 +13,10 @@
   margin-right: 11px;
   padding-left: 69px;
   text-align: left;
+}
+
+.advantages__line {
+  display: none;
 }
 
 .advantages__title {
@@ -43,23 +47,29 @@
     width: auto;
   }
 
+  .advantages__line {
+    display: none;
+  }
+
   .advantages__title {
     font-size: 21px;
   }
 
   .advantages__item--house {
-    margin-top: 162px;
-    margin-bottom: 62px;
+    padding-top: 162px;
+    padding-bottom: 59px;
   }
 
   .advantages__item--souvenir {
-    margin-top: 172px;
-    margin-bottom: 72px;
+    padding-top: 160px;
+    padding-bottom: 82px;
+    order: 3;
   }
 
   .advantages__item--food {
-    margin-top: 162px;
-    margin-bottom: 62px;
+    padding-top: 162px;
+    padding-bottom: 59px;
+    order: 2;
   }
 
   .advantages__description--house {
@@ -79,7 +89,7 @@
   .advantages__description--food {
     display: inline-block;
     vertical-align: middle;
-    width: 180px;
+    width: 151px;
     margin: 0;
   }
 }
@@ -104,5 +114,9 @@
     vertical-align: middle;
     width: 303px;
     margin: 0;
+  }
+
+  .advantages__line {
+    display: block;
   }
 }
