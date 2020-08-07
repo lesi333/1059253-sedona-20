@@ -5,7 +5,10 @@
 }
 
 .gallery__item {
+  position: relative;
   text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 22px;
   padding-bottom: 15px;
 }
@@ -16,6 +19,45 @@
 
 .gallery__list:first-child {
   border-top: 1px solid @photo-border-gray;
+}
+
+.gallery__signature {
+  display: block;
+  text-align: left;
+  position: relative;
+  .reset ();
+}
+
+.gallery__title {
+  .reset ();
+  font-weight: 700;
+  font-size: 14px;
+  color: @basic-black;
+}
+
+.gallery__author {
+  .reset ();
+  text-transform: none;
+  padding-bottom: 10px;
+}
+
+.gallery__likes {
+  position: relative;
+  padding-left: 38px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 23px;
+    height: 21px;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    position: absolute;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -32,6 +74,10 @@
     margin: 0;
   }
 
+  .gallery__list:nth-child(odd):not(:first-child) .gallery__signature {
+    background-color: @special-photo-gray;
+  }
+
   .gallery__item {
     .reset();
   }
@@ -43,6 +89,26 @@
   .gallery__list--full {
     width: 100%;
   }
+
+  .gallery__signature {
+    background-color: @basic-light-gray;
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+
+  .gallery__author {
+    padding-bottom: 0;
+  }
+
+  .gallery__likes {
+    padding-left: 38px;
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -53,6 +119,14 @@
     padding-right: 0;
   }
 
+  .gallery__item {
+    .reset();
+  }
+
+  .gallery__list:nth-child(odd):not(:first-child) .gallery__signature {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   .gallery__list {
     width: 400px;
   }
@@ -60,21 +134,23 @@
   .gallery__list--full {
     width: 100%;
   }
-}
 
-.gallery__title {
-  .reset ();
-  font-weight: 700;
-  font-size: 14px;
-  color: @basic-black;
-}
+  .gallery__title {
+    color: @basic-white;
+  }
 
-.gallery__author {
-  .reset ();
-  text-transform: none;
-}
+  .gallery__signature {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: @basic-white;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
-.gallery__likes {
-  .reset ();
-  font-weight: 700;
+  .gallery__likes {
+    &::before {
+      background-image: url("../img/like-icon-white.svg");
+      opacity: 1;
+    }
+  }
 }

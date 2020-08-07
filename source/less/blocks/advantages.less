@@ -3,16 +3,47 @@
   line-height: 21px;
   text-align: center;
   background-color: @basic-white;
-  padding-bottom: 35px;
+  padding-bottom: 12px;
   padding-top: 35px;
 }
 
 .advantages__item {
+  position: relative;
   width: 300px;
   margin-bottom: 26px;
   margin-right: 11px;
   padding-left: 69px;
   text-align: left;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+  }
+
+  &--house::before {
+    width: 39px;
+    height: 37px;
+    top: -13px;
+    left: 22px;
+    background-image: url("../img/icon-house-mobile.svg");
+  }
+
+  &--souvenir::before {
+    top: -13px;
+    left: 26px;
+    width: 32px;
+    height: 38px;
+    background-image: url("../img/icon-gift-mobile.svg");
+  }
+
+  &--food::before {
+    width: 40px;
+    height: 35px;
+    top: -9px;
+    left: 19px;
+    background-image: url("../img/icon-burger-mobile.svg");
+  }
 }
 
 .advantages__line {
@@ -45,6 +76,30 @@
     margin: 0 auto;
     padding: 0;
     width: auto;
+
+    &--house::before {
+      width: 75px;
+      height: 72px;
+      top: 62px;
+      left: 56px;
+      background-image: url("../img/icon-house.svg");
+    }
+
+    &--souvenir::before {
+      width: 64px;
+      height: 75px;
+      top: 63px;
+      left: 86px;
+      background-image: url("../img/icon-gift.svg");
+    }
+
+    &--food::before {
+      width: 76px;
+      height: 70px;
+      top: 63px;
+      left: 40px;
+      background-image: url("../img/icon-burger.svg");
+    }
   }
 
   .advantages__line {
@@ -64,6 +119,9 @@
     padding-top: 160px;
     padding-bottom: 82px;
     order: 3;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 1px;
   }
 
   .advantages__item--food {
@@ -95,6 +153,23 @@
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__item {
+    &--house::before {
+      top: 62px;
+      left: 104px;
+    }
+
+    &--souvenir::before {
+      top: 63px;
+      left: 158px;
+    }
+
+    &--food::before {
+      top: 63px;
+      left: 115px;
+    }
+  }
+
   .advantages__description--house {
     display: inline-block;
     vertical-align: middle;
