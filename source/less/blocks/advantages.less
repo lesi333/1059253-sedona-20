@@ -15,7 +15,7 @@
   padding-left: 69px;
   text-align: left;
 
-  &::before {
+  /*&::before {
     position: absolute;
     content: "";
     background-repeat: no-repeat;
@@ -43,6 +43,31 @@
     top: -9px;
     left: 19px;
     background-image: url("../img/icon-burger-mobile.svg");
+  }*/
+}
+
+.advantages__icon {
+  position: absolute;
+
+  &--icon-house {
+    width: 39px;
+    height: 37px;
+    top: -13px;
+    left: 22px;
+  }
+
+  &--icon-gift {
+    top: -13px;
+    left: 26px;
+    width: 32px;
+    height: 38px;
+  }
+
+  &--icon-burger {
+    width: 40px;
+    height: 35px;
+    top: -9px;
+    left: 19px;
   }
 }
 
@@ -77,7 +102,7 @@
     padding: 0;
     width: auto;
 
-    &--house::before {
+    /*&--house::before {
       width: 75px;
       height: 72px;
       top: 62px;
@@ -99,6 +124,29 @@
       top: 63px;
       left: 40px;
       background-image: url("../img/icon-burger.svg");
+    }*/
+  }
+
+  .advantages__icon {
+    &--icon-house {
+      width: 75px;
+      height: 72px;
+      top: 62px;
+      left: 56px;
+    }
+
+    &--icon-gift {
+      width: 64px;
+      height: 75px;
+      top: 63px;
+      left: 86px;
+    }
+
+    &--icon-burger {
+      width: 76px;
+      height: 70px;
+      top: 63px;
+      left: 40px;
     }
   }
 
@@ -153,7 +201,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages__item {
+  /*.advantages__item {
     &--house::before {
       top: 62px;
       left: 104px;
@@ -165,6 +213,23 @@
     }
 
     &--food::before {
+      top: 63px;
+      left: 115px;
+    }
+  }*/
+
+  .advantages__icon {
+    &--icon-house {
+      top: 62px;
+      left: 104px;
+    }
+
+    &--icon-gift {
+      top: 63px;
+      left: 158px;
+    }
+
+    &--icon-burger {
       top: 63px;
       left: 115px;
     }
