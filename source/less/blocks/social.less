@@ -10,11 +10,11 @@
 
 .social__link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 46px;
   height: 48px;
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
 
   &:hover,
   &:focus {
@@ -25,21 +25,9 @@
     color: rgba(255, 255, 255, 0.3);
     background-color: @basic-dark-blue;
   }
-
-  &--twitter {
-    background-image: url("../img/twitter.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/youtube.svg");
-  }
 }
 
-a.social__link path {
+.social__icon {
   fill: @basic-white;
 }
 
