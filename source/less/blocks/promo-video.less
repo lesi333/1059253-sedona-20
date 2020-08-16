@@ -115,6 +115,7 @@
 .promo-video__icon {
   fill: @special-video-gray;
   transform: translateY(-50%);
+  position: absolute;
 
   &--icon-full {
     left: 98px;
@@ -125,7 +126,7 @@
   }
 
   &--icon-repeat {
-    left: 19px;
+    left: -117px;
   }
 }
 
@@ -182,7 +183,9 @@
   }
 
   .promo-video__btns {
+    display: flex;
     height: 93px;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
@@ -209,15 +212,15 @@
     fill: @basic-white;
 
     &--icon-full {
-      left: 98px;
+      left: 586px;
     }
 
     &--icon-subtitles {
-      left: 36px;
+      left: 522px;
     }
 
     &--icon-repeat {
-      left: 19px;
+      left: 34px;
     }
   }
 }
@@ -240,6 +243,22 @@
       background-repeat: no-repeat;
       background-position: center 0;
       background-size: cover;
+    }
+  }
+
+  .promo-video__icon {
+    fill: @basic-white;
+
+    &--icon-full {
+      left: 738px;
+    }
+
+    &--icon-subtitles {
+      left: 675px;
+    }
+
+    &--icon-repeat {
+      left: 34px;
     }
   }
 }
