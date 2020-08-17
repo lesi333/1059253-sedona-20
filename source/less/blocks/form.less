@@ -87,8 +87,16 @@ input[type="radio"] + .form__field::before {
   top: 14px;
   transform: translateY(-50%);
   background-color: @basic-light-gray;
-  border: 5px solid @basic-light-gray;
   border-radius: 50%;
+}
+
+input[type="radio"]:hover + .form__field::before,
+input[type="radio"]:focus + .form__field::before {
+  background-color: @photo-border-gray;
+}
+
+input[type="radio"]:active + .form__field::before {
+  background-color: @special-form-gray;
 }
 
 input[type="radio"]:checked + .form__field::after {
@@ -99,9 +107,12 @@ input[type="radio"]:checked + .form__field::after {
   top: 14px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background-color: @basic-black;
-  border: 3px solid @basic-black;
+  background-color: @basic-extra-black;
   position: absolute;
+}
+
+input[type="radio"]:active + .form__field::after {
+  opacity: 0.3;
 }
 
 input[type="checkbox"] + .form__field::before {
@@ -113,8 +124,16 @@ input[type="checkbox"] + .form__field::before {
   transform: translateY(-50%);
   border-radius: 6px;
   background-color: @basic-light-gray;
-  border: 5px solid @basic-light-gray;
   position: absolute;
+}
+
+input[type="checkbox"]:hover + .form__field::before,
+input[type="checkbox"]:focus + .form__field::before {
+  background-color: @photo-border-gray;
+}
+
+input[type="checkbox"]:active + .form__field::before {
+  background-color: @special-form-gray;
 }
 
 input[type="checkbox"]:checked + .form__field::after {
@@ -124,9 +143,13 @@ input[type="checkbox"]:checked + .form__field::after {
   left: 17px;
   top: 3px;
   transform: rotate(-45deg);
-  border-left: 3px solid @basic-black;
-  border-bottom: 3px solid @basic-black;
+  border-left: 3px solid @basic-extra-black;
+  border-bottom: 3px solid @basic-extra-black;
   position: absolute;
+}
+
+input[type="checkbox"]:active + .form__field::after {
+  opacity: 0.3;
 }
 
 //Форма ФИО
@@ -188,6 +211,18 @@ input[type="checkbox"]:checked + .form__field::after {
     cursor: pointer;
     border: none;
     outline: none;
+  }
+
+  .form__email .form__icon {
+    position: absolute;
+    top: 21px;
+    left: 21px;
+  }
+
+  .form__tel .form__icon {
+    position: absolute;
+    top: 21px;
+    left: 21px;
   }
 }
 
@@ -318,8 +353,8 @@ input[type="checkbox"]:checked + .form__field::after {
 @media (min-width: @tablet-width) {
   .form {
     flex-direction: row;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .response__form {
@@ -327,12 +362,17 @@ input[type="checkbox"]:checked + .form__field::after {
   }
 
   .form__fieldset {
+    display: flex;
+    align-items: center;
     border-bottom: none;
     padding-right: 0;
     padding-left: 0;
+    //outline: 5px solid rgba(255, 0, 0, 0.8)
   }
 
   .form__title {
+    display: flex;
+    align-items: center;
     font-size: 21px;
   }
 
@@ -341,6 +381,16 @@ input[type="checkbox"]:checked + .form__field::after {
     margin-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 292px;
+      top: 0;
+      right: 382px;
+      background-color: @special-gray;
+    }
 
     .form__title {
       padding-bottom: 54px;
@@ -364,6 +414,25 @@ input[type="checkbox"]:checked + .form__field::after {
   .form__fieldset--contacts {
     .form__title {
       text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 60px;
+      }
+
+      &::after {
+        margin-left: 62px;
+      }
     }
 
     .form__data {
@@ -373,8 +442,6 @@ input[type="checkbox"]:checked + .form__field::after {
 
   //Впечатления
   .form__fieldset--impressions {
-    border-right: 1px solid @special-border-gray;
-
     .form__title {
       padding-bottom: 73px;
       text-align: left;
@@ -388,7 +455,22 @@ input[type="checkbox"]:checked + .form__field::after {
   //Достопримечательности
   .form__fieldset--sights {
     .form__title {
-      width: 308px;
+      padding-bottom: 56px;
+      padding-right: 0;
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 153px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 10px;
+      }
     }
 
     .form__list {
@@ -403,6 +485,25 @@ input[type="checkbox"]:checked + .form__field::after {
   .form__fieldset--review {
     .form__title {
       padding-bottom: 54px;
+      padding-right: 0;
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 76px;
+      }
+
+      &::after {
+        margin-left: 74px;
+      }
     }
 
     textarea {
@@ -414,9 +515,9 @@ input[type="checkbox"]:checked + .form__field::after {
   }
 
   .form__name {
-    width: 265px;
+    width: 261px;
     margin-bottom: 30px;
-    margin-left: 80px;
+    margin-left: 60px;
     padding-left: 0;
   }
 
@@ -427,11 +528,10 @@ input[type="checkbox"]:checked + .form__field::after {
   }
 
   .form__impressions {
-    width: 323px;
+    width: 327px;
     order: -1;
     margin-top: 0;
     padding-bottom: 0;
-    padding-right: 20px;
   }
 
   .form__sights {
@@ -446,7 +546,7 @@ input[type="checkbox"]:checked + .form__field::after {
   }
 
   .form__required {
-    margin-left: 184px;
+    margin-left: 164px;
   }
 
   .button__container {
@@ -465,11 +565,37 @@ input[type="checkbox"]:checked + .form__field::after {
     padding-right: 120px;
   }
 
+  //ФИО
+  .form__fieldset--name {
+    &::before {
+      right: 620px;
+    }
+  }
+
   //Контакты
   .form__fieldset--contacts {
     .form__title {
       padding-bottom: 0;
+      padding-right: 0;
+      padding-left: 0;
       margin-bottom: 73px;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 280px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 60px;
+      }
+
+      &::after {
+        margin-left: 62px;
+      }
     }
 
     .form__field {
@@ -505,10 +631,9 @@ input[type="checkbox"]:checked + .form__field::after {
 
   //Впечатления
   .form__fieldset--impressions {
-    border-right: 1px solid @special-border-gray;
-
     .form__title {
       text-align: center;
+      padding-right: 50px;
     }
   }
 
@@ -517,7 +642,21 @@ input[type="checkbox"]:checked + .form__field::after {
     .form__title {
       margin-bottom: 60px;
       padding-bottom: 0;
-      text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 320px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 16px;
+      }
     }
 
     .form__list {
@@ -533,8 +672,34 @@ input[type="checkbox"]:checked + .form__field::after {
     }
   }
 
+  //Отзыв
+  .form__fieldset--review {
+    .form__title {
+      padding-right: 0;
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        width: 279px;
+        height: 1px;
+        background-color: @special-gray;
+      }
+
+      &::before {
+        margin-right: 72px;
+      }
+
+      &::after {
+        margin-left: 79px;
+      }
+    }
+  }
+
   .form__name {
     width: 404px;
+    margin-left: 80px;
   }
 
   .form__impressions {
