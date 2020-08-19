@@ -20,7 +20,6 @@
   cursor: pointer;
   border: none;
   background: transparent;
-  outline: none;
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -47,13 +46,14 @@
   box-shadow:
     0 8px 0 0 fade(@basic-light-blue, 30%),
     0 16px 0 0 fade(@basic-light-blue, 30%);
+  outline: none;
 }
 
 .main-nav--opened .main-nav__toggle {
   position: absolute;
   display: block;
-  top: 26px;
-  right: 17px;
+  top: 25px;
+  right: 23px;
   width: 23px;
   height: 23px;
   cursor: pointer;

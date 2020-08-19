@@ -7,13 +7,14 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 var rename = require("gulp-rename");
-//const imagemin = require("gulp-imagemin");
 const image=require("gulp-image");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -37,11 +38,20 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
   .pipe(posthtml([include()]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
   .pipe(sync.stream());
 }
 
 exports.html = html;
+
+const js = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("source/js"))
+};
+
+exports.js = js;
 
 // Server
 
@@ -70,15 +80,6 @@ exports.default = (done) => gulp.series(
   build, server, watcher
 )
 (done);
-
-//const images = () => {
-//  return gulp.src("source/img/**/*.{jpg,png,svg}")
-//    .pipe(imagemin([
-//      imagemin.optipng({optimizationLevel: 3}),
-//      imagemin.mozjpeg({progressive: true}),
-//      imagemin.svgo()
-//    ]))
-//};
 
 const images = () => {
   return gulp.src("source/img/**/*")
@@ -131,6 +132,7 @@ const build = (done) => gulp.series(
   "styles",
   "sprite",
   "html",
+  "js",
 )
 (done);
 
