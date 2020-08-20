@@ -1,3 +1,10 @@
+.info-city__header {
+  width: 285px;
+  margin: 0 auto;
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+
 .info-city__title {
   .reset ();
   font-size: 18px;
@@ -5,37 +12,33 @@
   text-align: center;
   color: @basic-black;
   padding-bottom: 30px;
-}
-
-.info-city__header {
-  width: 285px;
-  margin: 0 auto;
-  margin-top: 32px;
-  margin-bottom: 27px;
-}
-
-@media (min-width: @tablet-width) {
-  .info-city__title {
-    font-size: 21px;
-  }
-
-  .info-city__header {
-    width: 520px;
-    margin-top: 43px;
-    margin-bottom: 53px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .info-city__header {
-    width: 483px;
-    margin-top: 55px;
-    margin-bottom: 41px;
-  }
+  padding-left: 12px;
+  width: 272px;
 }
 
 .info-city__description {
   margin: 0;
   text-align: center;
   color: @basic-extra-black;
+}
+
+@media (min-width: @tablet-width) {
+  .info-city__header {
+    width: 520px;
+    margin-top: 45px;
+    margin-bottom: 53px;
+  }
+
+  .info-city__title {
+    font-size: 21px;
+    padding-bottom: 32px;
+    width: 504px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-city__header {
+    margin-top: 55px;
+    margin-bottom: 41px;
+  }
 }

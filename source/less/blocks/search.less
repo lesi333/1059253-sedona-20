@@ -1,6 +1,6 @@
 .search {
   text-align: center;
-  margin-top: 33px;
+  margin-top: 30px;
   margin-bottom: 49px;
 }
 
@@ -14,7 +14,7 @@
   font-size: 21px;
   font-weight: 700;
   color: @basic-black;
-  margin-bottom: 32px;
+  margin-bottom: 21px;
 }
 
 .search__description {
@@ -29,9 +29,8 @@
   width: 280px;
   margin: 0 auto;
   padding-top: 15px;
-  padding-bottom: 18px;
+  padding-bottom: 17px;
   border: none;
-  outline: none;
 
   &:hover,
   &:focus {
@@ -41,6 +40,7 @@
   &:active {
     background-color: @basic-dark-blue;
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   &:disabled {
@@ -65,6 +65,7 @@
 
   .search__title {
     font-size: 30px;
+    margin-bottom: 34px;
   }
 
   .search__item {
@@ -74,6 +75,10 @@
   .search__line {
     display: block;
   }
+
+  .search__description {
+    margin-bottom: 38px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -81,6 +86,14 @@
     text-align: center;
     margin-top: 58px;
     margin-bottom: 66px;
+  }
+
+  .search__title {
+    margin-bottom: 33px;
+  }
+
+  .search__description {
+    margin-bottom: 43px;
   }
 
   .search__line {

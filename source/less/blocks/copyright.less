@@ -5,28 +5,31 @@
 .copyright__text {
   color: @basic-black;
   text-align: center;
-  padding-right: 13px;
+  padding-right: 10px;
   padding-left: 94px;
+  padding-top: 4px;
 }
 
-.copyright__icon-logo:hover,
-.copyright__icon-logo:focus {
-  fill: @basic-light-blue;
-}
+.copyright__icon-logo {
+  &:hover,
+  &:focus {
+    fill: @basic-light-blue;
+  }
 
-.copyright__icon-logo:active {
-  fill: @special-logo-gray;
+  &:active {
+    fill: @special-logo-gray;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    padding-top: 48px;
+    padding-top: 43px;
   }
 
   .copyright__text {
-    padding-right: 13px;
+    padding-right: 9px;
     padding-left: 10px;
-    padding-bottom: 48px;
+    padding-top: 4px;
   }
 }
 
@@ -36,6 +39,8 @@
   }
 
   .copyright__text {
-    padding-left: 82px;
+    padding-right: 10px;
+    padding-left: 86px;
+    padding-top: 4px;
   }
 }
